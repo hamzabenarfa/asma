@@ -6,6 +6,7 @@ const ProduitScema = new mongoose.Schema(
     prix: { type: Number, required: false },
     description: { type: String, required: false },
     stock: { type: Number, required: false },
+    username: { type: String, required: false },
   },
   { timestamps: true }
 );

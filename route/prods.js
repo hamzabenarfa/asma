@@ -11,4 +11,13 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.get("/", async (req, res) => {
+  try {
+    prod = await Produit.find();
+    res.status(200).json(prod);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
